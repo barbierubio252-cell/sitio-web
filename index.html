@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naturetto | Panadería artesanal saludable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              olive: '#6b8a4f',
+              cream: '#f8efe2',
+              sage: '#dfe8c9',
+              earth: '#7a5c3a',
+              warm: '#c97d2f'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', sans-serif; }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade { animation: fadeIn 0.7s ease-out both; }
+      .glass { backdrop-filter: blur(14px); }
+    </style>
+  </head>
+  <body class="bg-cream text-stone-800">
+    <header class="relative overflow-hidden bg-[url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-stone-900/55"></div>
+      <div class="relative">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 text-white lg:px-8">
+          <a href="#" class="text-2xl font-semibold tracking-wide">Naturetto</a>
+          <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+            <a href="#inicio" class="transition hover:text-amber-200">Inicio</a>
+            <a href="#tienda" class="transition hover:text-amber-200">Tienda</a>
+            <a href="#kits" class="transition hover:text-amber-200">Nuestros Kits</a>
+            <a href="#quienes-somos" class="transition hover:text-amber-200">Quiénes Somos</a>
+            <a href="#mayoristas" class="transition hover:text-amber-200">Mayoristas</a>
+          </div>
+          <a href="#" class="flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 glass">
+            <span>🛒</span>
+            <span>R$ 0,00</span>
+          </a>
+          <button id="menuBtn" class="rounded-full border border-white/70 p-2 text-xl md:hidden">☰</button>
+        </nav>
+
+        <div id="mobileMenu" class="hidden border-t border-white/20 bg-stone-900/85 px-6 py-4 text-white md:hidden">
+          <div class="flex flex-col gap-3 text-sm">
+            <a href="#inicio" class="transition hover:text-amber-200">Inicio</a>
+            <a href="#productos" class="transition hover:text-amber-200">Tienda</a>
+            <a href="#kits" class="transition hover:text-amber-200">Nuestros Kits</a>
+            <a href="#quienes-somos" class="transition hover:text-amber-200">Quiénes Somos</a>
+            <a href="#mayoristas" class="transition hover:text-amber-200">Mayoristas</a>
+          </div>
+        </div>
+
+        <section id="inicio" class="mx-auto flex min-h-[85vh] max-w-7xl items-center px-6 py-20 lg:px-8 lg:py-28">
+          <div class="animate-fade max-w-2xl rounded-[2rem] bg-white/10 p-8 shadow-2xl glass sm:p-10 lg:p-12">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-amber-200">Panadería artesanal saludable</p>
+            <h1 class="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+              Sabor de verdad para una vida más saludable
+            </h1>
+            <p class="mt-5 text-lg text-stone-100 sm:text-xl">
+              Sin gluten • Sin lácteos • Sin azúcar. Tu pan saludable todos los días.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#productos" class="rounded-full bg-olive px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-lime-700">Hacer mi pedido</a>
+              <a href="#quienes-somos" class="rounded-full border border-white/70 px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-white/10">Conocer más</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section id="productos" class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div class="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-olive">Tienda</p>
+            <h2 class="text-3xl font-bold text-stone-800">Nuestros Panes y Combos</h2>
+          </div>
+          <p class="max-w-xl text-stone-600">Selecciona tus favoritos y arma tu canasta con productos artesanales, nutritivos y llenos de sabor.</p>
+        </div>
+
+        <div class="relative rounded-[2rem] bg-white p-4 shadow-xl sm:p-6 lg:p-8">
+          <div id="carousel" class="overflow-hidden">
+            <div id="carouselTrack" class="flex transition-transform duration-500 ease-out">
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80" alt="Pan multigrano artesanal" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Pan Multigrano</h3>
+                    <p class="mt-2 text-stone-600">Crocante por fuera, tierno por dentro y con semillas naturales.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 18,90</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc7b?auto=format&fit=crop&w=900&q=80" alt="Pan de cebada artesanal" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Pan de Cebada</h3>
+                    <p class="mt-2 text-stone-600">Una opción suave, digestiva y perfecta para el desayuno.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 21,50</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=900&q=80" alt="Pan de batata dulce" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Pan de Batata Dulce</h3>
+                    <p class="mt-2 text-stone-600">Suave, natural y con un toque dulce equilibrado.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 24,90</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80" alt="Baguete integral" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Baguete Integral</h3>
+                    <p class="mt-2 text-stone-600">Ideal para acompañar sopas, ensaladas y meriendas livianas.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 16,80</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&fit=crop&w=900&q=80" alt="Pan de fibras" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Pan de Fibras</h3>
+                    <p class="mt-2 text-stone-600">Rico en fibras y perfecto para una dieta equilibrada.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 29,80</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=900&q=80" alt="Pan de nuez artesanal" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Pan de Nuez</h3>
+                    <p class="mt-2 text-stone-600">Cremoso, aromático y con un sabor muy sofisticado.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 27,40</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80" alt="Pan de semillas" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Pan de Semillas</h3>
+                    <p class="mt-2 text-stone-600">Con chía, lino y girasol para una textura irresistible.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 19,70</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc7b?auto=format&fit=crop&w=900&q=80" alt="Pan de banana y canela" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Pan de Banana y Canela</h3>
+                    <p class="mt-2 text-stone-600">Aromático, dulce y perfecto para la merienda.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 22,10</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-2">
+                <article class="grid gap-6 rounded-[1.5rem] border border-stone-200 bg-[#fcf7ef] p-5 lg:grid-cols-[1.1fr_0.9fr] lg:p-7">
+                  <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&fit=crop&w=900&q=80" alt="Kit desayuno saludable" class="h-48 w-full rounded-[1.25rem] object-cover" />
+                  <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold">Kit de Desayuno Saludable</h3>
+                    <p class="mt-2 text-stone-600">Incluye panes, mantequillas y opciones especiales para comenzar el día con energía.</p>
+                    <div class="mt-5 flex items-center justify-between">
+                      <span class="text-2xl font-bold text-olive">R$ 96,00</span>
+                      <button class="rounded-full bg-olive px-4 py-2 text-sm font-semibold text-white transition hover:bg-lime-700">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between">
+            <div class="flex gap-2" id="carouselDots"></div>
+            <div class="flex gap-2">
+              <button id="prevBtn" class="rounded-full border border-stone-300 bg-white px-4 py-2 text-sm font-semibold text-stone-700 transition hover:bg-stone-100">←</button>
+              <button id="nextBtn" class="rounded-full border border-stone-300 bg-white px-4 py-2 text-sm font-semibold text-stone-700 transition hover:bg-stone-100">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kits" class="bg-[#f4e7d5] py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="rounded-[2rem] bg-white p-8 shadow-lg sm:p-10 lg:p-12">
+            <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+              <div class="max-w-2xl">
+                <p class="text-sm font-semibold uppercase tracking-[0.3em] text-olive">Beneficios</p>
+                <h2 class="mt-2 text-3xl font-bold text-stone-800">Opciones seguras para celíacos, diabéticos e intolerantes</h2>
+                <p class="mt-4 text-stone-600">Cada producto fue pensado para cuidar la salud sin sacrificar el placer de comer bien.</p>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-3">
+                <div class="rounded-2xl bg-cream p-5 text-center transition duration-300 hover:-translate-y-1">
+                  <div class="text-3xl">🌿</div>
+                  <h3 class="mt-3 font-semibold">Sin Gluten</h3>
+                </div>
+                <div class="rounded-2xl bg-cream p-5 text-center transition duration-300 hover:-translate-y-1">
+                  <div class="text-3xl">🥛</div>
+                  <h3 class="mt-3 font-semibold">Sin Lactosa</h3>
+                </div>
+                <div class="rounded-2xl bg-cream p-5 text-center transition duration-300 hover:-translate-y-1">
+                  <div class="text-3xl">🍃</div>
+                  <h3 class="mt-3 font-semibold">Sin Azúcar</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quienes-somos" class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-olive">Quiénes Somos</p>
+            <h2 class="mt-2 text-3xl font-bold text-stone-800">Nacimos para unir calidad, seguridad y sofisticación.</h2>
+            <p class="mt-5 text-lg text-stone-600">
+              Cuidamos cada detalle para transformar tu relación con la comida sin abrir mano del placer. Nuestra panadería artesanal combina ingredientes naturales, procesos cuidadosos y una propuesta auténtica para quienes buscan bienestar todos los días.
+            </p>
+            <a href="#mayoristas" class="mt-8 inline-flex rounded-full bg-earth px-6 py-3 font-semibold text-white transition hover:-translate-y-1">Hablar con nosotros</a>
+          </div>
+          <div class="overflow-hidden rounded-[2rem] shadow-lg">
+            <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&fit=crop&w=1000&q=80" alt="Panadería artesanal con productos saludables" class="h-full w-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <section id="tienda" class="mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+        <div class="rounded-[2rem] bg-white p-8 shadow-xl lg:p-10">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div class="max-w-2xl">
+              <p class="text-sm font-semibold uppercase tracking-[0.3em] text-olive">Tienda</p>
+              <h2 class="mt-2 text-3xl font-bold text-stone-800">Tu tienda de pan saludable, con opciones para cada rutina</h2>
+              <p class="mt-4 text-stone-600">Descubre panes diarios, combos especiales, kits para desayunos y opciones pensadas para quienes cuidan su alimentación sin perder sabor.</p>
+            </div>
+            <a href="#productos" class="inline-flex rounded-full bg-olive px-6 py-3 font-semibold text-white transition hover:-translate-y-1">Ver productos</a>
+          </div>
+
+          <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-2xl bg-cream p-5">
+              <h3 class="font-semibold text-stone-800">Pan diario</h3>
+              <p class="mt-2 text-sm text-stone-600">Opciones suaves y nutritivas para todas las mañanas.</p>
+            </div>
+            <div class="rounded-2xl bg-cream p-5">
+              <h3 class="font-semibold text-stone-800">Kits saludables</h3>
+              <p class="mt-2 text-sm text-stone-600">Combos prácticos para desayunar y compartir.</p>
+            </div>
+            <div class="rounded-2xl bg-cream p-5">
+              <h3 class="font-semibold text-stone-800">Mayoristas</h3>
+              <p class="mt-2 text-sm text-stone-600">Precios especiales para negocios y eventos.</p>
+            </div>
+            <div class="rounded-2xl bg-cream p-5">
+              <h3 class="font-semibold text-stone-800">Envío a domicilio</h3>
+              <p class="mt-2 text-sm text-stone-600">Tu pedido llega fresco y listo para disfrutar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-[2rem] bg-[#f4e7d5] p-8 shadow-lg lg:p-10">
+          <h3 class="text-2xl font-bold text-stone-800">Preguntas frecuentes</h3>
+          <div class="mt-6 space-y-3">
+            <details class="rounded-2xl bg-white p-4 shadow-sm" open>
+              <summary class="cursor-pointer font-semibold text-stone-800">¿Qué tipos de pan ofrecen?</summary>
+              <p class="mt-2 text-sm text-stone-600">Tenemos panes multigranos, integrales, de semillas, de batata y opciones sin gluten, sin lactosa y sin azúcar.</p>
+            </details>
+            <details class="rounded-2xl bg-white p-4 shadow-sm">
+              <summary class="cursor-pointer font-semibold text-stone-800">¿Hacen entregas a domicilio?</summary>
+              <p class="mt-2 text-sm text-stone-600">Sí, realizamos entregas en zonas seleccionadas y también atendemos pedidos por mayor.</p>
+            </details>
+            <details class="rounded-2xl bg-white p-4 shadow-sm">
+              <summary class="cursor-pointer font-semibold text-stone-800">¿Son aptos para personas con restricciones alimentarias?</summary>
+              <p class="mt-2 text-sm text-stone-600">Sí, muchos de nuestros productos están pensados para personas con intolerancias o necesidades específicas.</p>
+            </details>
+            <details class="rounded-2xl bg-white p-4 shadow-sm">
+              <summary class="cursor-pointer font-semibold text-stone-800">¿Puedo pedir kits o combos?</summary>
+              <p class="mt-2 text-sm text-stone-600">Claro, tenemos kits para desayuno, meriendas y pedidos especiales para eventos y negocios.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="mayoristas" class="bg-stone-900 px-6 py-10 text-stone-300 lg:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div>
+          <h2 class="text-xl font-semibold text-white">Naturetto</h2>
+          <p class="mt-2 max-w-md text-sm">Panadería artesanal de productos saludables, con sabor auténtico y cuidado diario.</p>
+        </div>
+        <div class="space-y-2 text-sm">
+          <p><a href="https://wa.me/5551993624448" class="transition hover:text-white">WhatsApp: +55 51993624448</a></p>
+          <p><a href="mailto:josuedanielcalderonpalma@gmail.com" class="transition hover:text-white">Email: josuedanielcalderonpalma@gmail.com</a></p>
+          <p><a href="https://instagram.com" class="transition hover:text-white">Instagram: @naturetto</a></p>
+        </div>
+      </div>
+      <div class="mx-auto mt-8 max-w-7xl border-t border-stone-800 pt-6 text-center text-sm">
+        © 2026 Naturetto. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <a href="https://wa.me/5551993624448" class="fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full bg-[#25D366] px-4 py-3 text-white shadow-lg transition duration-300 hover:scale-105">
+      <span class="text-2xl">💬</span>
+      <span class="font-semibold">WhatsApp</span>
+    </a>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      const track = document.getElementById('carouselTrack');
+      const slides = Array.from(track.children);
+      const dotsContainer = document.getElementById('carouselDots');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      let currentSlide = 0;
+
+      slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'h-3 w-3 rounded-full border border-stone-300 transition';
+        dot.addEventListener('click', () => {
+          currentSlide = index;
+          updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsContainer.children);
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, index) => {
+          dot.className = `h-3 w-3 rounded-full border transition ${index === currentSlide ? 'bg-olive border-olive' : 'border-stone-300 bg-white'}`;
+        });
+      }
+
+      prevBtn?.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateCarousel();
+      });
+
+      nextBtn?.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateCarousel();
+      });
+
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateCarousel();
+      }, 5000);
+
+      updateCarousel();
+    </script>
+  </body>
+</html>
